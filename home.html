@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toamto</title>
+  <link rel="shortcut icon" href="img/cart2.jpg" />
+  <!-- Google fonts : 
+          -- Raalway.
+          -- Josefin Sans.
+    -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <!-- TimeDate "flatpickr"-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Css Files -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+  <div class="big-box">
+    <!--******! Start Header !******-->
+    <header>
+      <div class="container">
+        <a href="home.html"><img class="logo" src="img/logo.png" alt="logo" /></a>
+        <i class="fa-solid fa-align-justify show"></i>
+        <i class="fa-solid fa-xmark"></i>
+        <ul>
+          <li><a class="active" href="home.html">HOME</a></li>
+          <li><a href="#">MENU</a></li>
+          <li><a href="#">RESERVATION</a></li>
+          <li><a href="#">PAGES</a></li>
+          <li><a href="#">RECIPE</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">SHOP</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li class="shopping">
+            <a href="#">
+              <i class="fa-solid fa-basket-shopping"></i>
+              <span>2</span>
+              <i class="fa-solid fa-caret-down"></i>
+            </a>
+            <div class="basket">
+              <h2>SHOPPING CART</h2>
+              <div class="box">
+                <img src="img/cart1.jpg" alt="cart" />
+                <div class="title">
+                  <h4><a href="#">Breakfast with coffee</a></h4>
+                  <span>$49.99 × 2</span>
+                </div>
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div class="price">
+                <p>$214.95</p>
+                <a href="#"><button>VIEW CART</button></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Main -->
+    <main>
+      <div class="gear">
+        <i class="fa-solid fa-gear"></i>
+      </div>
+      <div class="settings">
+        <div class="mode">
+          <label>Boxed</label>
+          <input type="checkbox" id="sett" />
+          <label class="switch" for="sett"></label>
+          <label>Wide</label>
+        </div>
+        <hr />
+        <h4>MAIN BACKGROUND</h4>
+        <div class="box">
+          <img class="active" src="img/ba1.png" alt="backgroun-1" />
+          <img src="img/ba2.png" alt="backgroun-2" />
+          <img src="img/ba3.png" alt="backgroun-3" />
+          <img src="img/ba4.png" alt="backgroun-4" />
+          <img src="img/ba5.png" alt="backgroun-5" />
+          <img src="img/ba6.png" alt="backgroun-6" />
+          <img src="img/ba7.png" alt="backgroun-7" />
+          <img src="img/ba8.png" alt="backgroun-8" />
+          <img src="img/ba9.png" alt="backgroun-9" />
+          <img src="img/ba10.png" alt="backgroun-10" />
+        </div>
+        <hr />
+        <h4>COLOR SCHEME</h4>
+        <div class="box">
+          <span class="active" data-color="#ff7149"></span>
+          <span data-color="#5bb75b"></span>
+          <span data-color="#00becc"></span>
+          <span data-color="#dc8068"></span>
+          <span data-color="#45b5f5"></span>
+          <span data-color="#dc3522"></span>
+          <span data-color="#c75a5a"></span>
+          <span data-color="#f9c56a"></span>
+        </div>
+        <button class="reset">RESET</button>
+      </div>
+      <img src="img/restaurant.png" alt="restaurant" />
+      <h1>DELICIOUS <span>FOOD</span></h1>
+      <p>Tomato is a delitious restaurant website template</p>
+      <a href="#about"><i class="fa-solid fa-angles-down"></i></a>
+    </main>
+    <!-- End Main -->
+
+    <!-- Start Restaurant -->
+    <section class="restaurant" id="about">
+      <div class="container">
+        <div class="title-box">
+          <h2 class="main-header">THE RESTAURANT</h2>
+          <p class="main-description">
+            A little about us and a breif history of how we started.
+          </p>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img src="img/rest1.png" alt="Food1" />
+            <img src="img/rest2.png" alt="Food2" />
+            <img src="img/rest3.png" alt="Food3" />
+          </div>
+          <div class="text">
+            <p>
+              Cras ut viverra eros. Phasellus sollicitudin sapien id luctus
+              tempor. Sed hendrerit interdum sagittis. Donec nunc lacus,
+              dapibus nec interdum eget, ultrices eget justo. Nam purus lacus,
+              efficitur eget laoreet sed, finibus nec neque. Cras eget enim in
+              diam dapibus sagittis. In massa est, dignissim in libero ac,
+              fringilla ornare mi. Etiam interdum ligula purus, placerat
+              aliquam odio faucibus a. Pellentesque et pulvinar lectus. Fusce
+              scelerisque nisi id nisl gravida ultricies.
+            </p>
+            <br />
+            <p>
+              Ultrices eget justo. Nam purus lacus, efficitur eget laoreet
+              sed, finibus nec neque. Cras eget enim in diam dapibus sagittis.
+              In massa est, dignissim in libero ac, fringilla ornare mi.
+            </p>
+            <img src="img/signature.png" alt="Signature" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Restaurant -->
+    <!-- Start Specials -->
+    <section class="specials" id="specials">
+      <div class="container">
+        <div class="title-box">
+          <h2 class="main-header">TODY'S SPECIALS</h2>
+          <p class="main-description">
+            A little about us and a breif history of how we started.
+          </p>
+        </div>
+        <div class="slider-box">
+          <i class="fa-solid fa-chevron-left"></i>
+          <div class="cards">
+            <div class="box">
+              <div class="image">
+                <img src="img/specials.png" alt="Specials" style="opacity: 0.08" />
+              </div>
+              <div class="text">
+                <div class="title">
+                  <h2>1 PANCAKE WITH CARAMEL</h2>
+                  <p>
+                    If you are a fan of caramel cake, then you'll love our
+                    Pancake with caramel icecream. It's not thick, but very
+                    tasty.
+                  </p>
+                </div>
+
+                <p>
+                  Ultrices In massa est, dignissim in libero ac, fringilla
+                  ornare mi.Ultrices eget justo. Nam purus lacus, efficitur
+                  eget laoreet sed, finibus nec neque. Cras eget enim in diam
+                  dapibus sagittis. accumsan, habitant morbi tristique
+                  senectus et netus et malesuada fames ac turpis egestas.
+                </p>
+                <div class="btn">
+                  <a href="#" class="order">ORDER NOW</a>
+                  <a href="#" class="add">ADD TO CART</a>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="box">
+                <img
+                  src="img/specials.png"
+                  alt="Specials"
+                  style="opacity: 0.08"
+                />
+                <div class="text">
+                  <div class="title">
+                    <h2>2 PANCAKE WITH CARAMEL</h2>
+                    <p>
+                      If you are a fan of caramel cake, then you'll love our
+                      Pancake with caramel icecream. It's not thick, but very
+                      tasty.
+                    </p>
+                  </div>
+  
+                  <p>
+                    Ultrices In massa est, dignissim in libero ac, fringilla
+                    ornare mi.Ultrices eget justo. Nam purus lacus, efficitur eget
+                    laoreet sed, finibus nec neque. Cras eget enim in diam dapibus
+                    sagittis. accumsan, habitant morbi tristique senectus et netus
+                    et malesuada fames ac turpis egestas.
+                  </p>
+                  <div class="btn">
+                    <a href="#" class="order">ORDER NOW</a>
+                    <a href="#" class="add">ADD TO CART</a>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <img
+                  src="img/specials.png"
+                  alt="Specials"
+                  style="opacity: 0.08"
+                />
+                <div class="text">
+                  <div class="title">
+                    <h2>3 PANCAKE WITH CARAMEL</h2>
+                    <p>
+                      If you are a fan of caramel cake, then you'll love our
+                      Pancake with caramel icecream. It's not thick, but very
+                      tasty.
+                    </p>
+                  </div>
+  
+                  <p>
+                    Ultrices In massa est, dignissim in libero ac, fringilla
+                    ornare mi.Ultrices eget justo. Nam purus lacus, efficitur eget
+                    laoreet sed, finibus nec neque. Cras eget enim in diam dapibus
+                    sagittis. accumsan, habitant morbi tristique senectus et netus
+                    et malesuada fames ac turpis egestas.
+                  </p>
+                  <div class="btn">
+                    <a href="#" class="order">ORDER NOW</a>
+                    <a href="#" class="add">ADD TO CART</a>
+                  </div>
+                </div>
+              </div> -->
+          </div>
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+    </section>
+    <!-- End Specials -->
+
+    <!-- Start Reservations -->
+    <section class="reserv">
+      <div class="container">
+        <div class="title-box">
+          <h2 class="main-header">RESERVATIONS</h2>
+          <p class="main-description">
+            Book a table online. Leads will reach in your email.
+          </p>
+        </div>
+        <div class="box">
+          <form>
+            <div class="form-box">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name" placeholder="Full Name" required /> <!-- data-icon="\f14b" -->
+                <i class="fa-solid fa-pen-to-square"></i>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Your Email ID" required />
+                <!-- data-icon="\f0e0" -->
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" placeholder="Enter your Phone Number" required />
+                <!-- data-icon="\f095" -->
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="form-group">
+                <label for="num">Guests</label>
+                <input type="number" name="num" id="num" placeholder="How many of you?" required />
+                <!-- data-icon="\e462" -->
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="form-group">
+                <label for="date">Date</label>
+                <input type="text" name="date" id="date" placeholder="Pick a date" required />
+                <!-- data-icon="\f133" -->
+                <i class="fa-solid fa-calendar"></i>
+              </div>
+              <div class="form-group">
+                <label for="time">Time</label>
+                <input type="time" name="time" id="time" placeholder="Pick a time" required />
+                <!-- data-icon="\f017" -->
+                <!-- <i class="fa-solid fa-clock"></i> -->
+              </div>
+            </div>
+            <input type="submit" value="MAKE RESERVATION" />
+          </form>
+        </div>
+        <p class="call">
+          You can also call: <span>+1 224 6787 004</span> to make a reservation.
+        </p>
+      </div>
+  </div>
+  </section>
+  <!-- End Reservations -->
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,974 @@
+/*! Colors :
+*/
+/*!**********! General Formats !**********!*/
+
+:root {
+  /********** color **********/
+  --main: #ff7149;
+  /* --main2: #5bb75b;
+  --main3: #00becc;
+  --main4: #dc8068;
+  --main5: #45b5f5;
+  --main6: #dc3522;
+  --main7: #fba1a1;
+  --main8: #ff7149; */
+  --yellow2: #f2ba57;
+  --font: #828281;
+  --seFont: #aaa;
+  --gray: #efefef;
+  --header: #4b4741;
+  --seHeader: #777;
+  --footer: #b5b5b4;
+  /*****  *****/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../img/ba1.png);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  outline: none;
+}
+
+.big-box {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: 0.6s;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.title-box {
+  padding: 80px 0 49px;
+}
+.main-header {
+  font-family: "Raleway", sans-serif;
+  color: #4b4741;
+  text-align: center;
+  font-weight: 800;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.main-description {
+  font-weight: 400;
+  line-height: 1;
+  color: #777;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  font-size: 23px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.main-description::after {
+  content: "";
+  height: 3px;
+  width: 115px;
+  background-color: var(--main);
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .main.header {
+    font-size: 32px;
+  }
+  .main-description {
+    font-size: 21px;
+  }
+}
+
+/*!********************! [ Table of contents ] !********************!*/
+/**
+  -- header Section ==> 
+  -- 
+*/
+
+/*!******! Start Header !******!*/
+
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 7px 0.2px #6a6a6a78;
+  font-family: "Raleway", sans-serif;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: 0.6s;
+  margin: 0 auto;
+  user-select: none;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .container .logo {
+  padding: 7px 15px;
+  background: var(--main);
+  border-radius: 10px;
+}
+
+header .container > .fa-solid {
+  font-size: 32px;
+  height: 70px;
+  line-height: 2.1;
+  color: var(--main);
+  position: relative;
+  display: none;
+  cursor: pointer;
+}
+
+header .container ul li > a {
+  display: inline-block;
+  line-height: 4.4;
+  color: rgb(0, 0, 0);
+  height: 70px;
+  font-weight: bold;
+  position: relative;
+  user-select: none;
+}
+
+header .container ul li a.active,
+header .container ul li a:hover {
+  color: var(--main);
+}
+
+header .container ul li:not(:last-child) > a {
+  margin-right: 20px;
+}
+
+header .container ul li:not(:last-child) > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  width: 0;
+  height: 0.25rem;
+  background-color: var(--main);
+  transition: 0.4s;
+}
+
+header .container ul li a.active::after,
+header .container ul li a:hover::after {
+  width: 100%;
+}
+
+header .container .shopping {
+  position: relative;
+}
+
+header .container .shopping > i {
+  font-size: 18px;
+  color: #ececec;
+}
+
+header .container .shopping a > span {
+  background-color: var(--main);
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.3;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #000;
+}
+
+@media (max-width: 992px) {
+  header .container ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 9px 0 #5c5b5b;
+    width: 100%;
+    padding: 0 25px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+  }
+
+  header .container ul.show {
+    height: auto;
+    overflow: visible;
+  }
+
+  header .container ul li a::after {
+    display: none;
+  }
+  header .container .fa-solid.show {
+    display: block;
+  }
+  header .container ul li:last-child {
+    position: absolute;
+    right: 50px;
+    top: -70px;
+    text-align: left;
+  }
+}
+
+header .container .basket {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 300px;
+  background-color: rgba(255, 255, 255);
+  border-top: 3px solid var(--main);
+  border-radius: 0 0 6px 6px;
+  display: none;
+}
+
+header .container .shopping:hover .basket {
+  display: block;
+}
+
+header .container .basket h2 {
+  color: rgb(0, 0, 0);
+  padding: 15px 10px;
+  position: relative;
+}
+
+header .container .basket .box {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+header .container .basket h2::after,
+header .container .basket .box::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2.5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+header .container .basket .box img {
+  border-radius: 4px;
+}
+
+header .container .basket .box .title {
+  margin-left: 15px;
+}
+
+header .container .basket .box .title h4 a {
+  color: #212121;
+  font-family: "Josefin Sans", sans-serif;
+}
+header .container .basket .box .title h4 a:hover {
+  color: var(--main);
+}
+
+header .container .basket .box .title span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e1818;
+  font-family: "Raleway", sans-serif;
+}
+
+header .container .basket .box i {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 15px;
+  color: #555;
+  cursor: pointer;
+}
+header .container .basket .box i:hover {
+  color: #222;
+}
+header .container .basket .price {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+header .container .basket .price p {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+header .container .basket .price button {
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 10px 15px;
+  background-color: var(--main);
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+header .container .basket .price button:hover {
+  opacity: 1;
+}
+/*!******! End Header !******!*/
+
+/*!******! Start Main !******!*/
+main {
+  min-height: 100vh;
+  background: url(../img/main3.jpg) center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  user-select: none;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+main .gear {
+  font-size: 37px;
+  color: var(--main);
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 1.3;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0 0 13px;
+  transition: 0.6s;
+  z-index: 100;
+}
+
+main .gear.translate {
+  left: 200px;
+}
+
+main .settings {
+  width: 200px;
+  padding: 20px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 70px;
+  left: -200px;
+  opacity: 0;
+  border-radius: 0 0 13px;
+  transition: 0.6s;
+  z-index: 100;
+}
+
+main .settings.show {
+  left: 0;
+  opacity: 1;
+}
+
+main .settings .mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main .settings input {
+  display: none;
+}
+
+main .settings label {
+  color: #424242;
+  font-size: 22px;
+}
+
+main .settings .switch {
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: inset 0 1px 3px #f3f3f3;
+  border-radius: 20px;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  padding: 1px;
+  cursor: pointer;
+}
+
+main .settings .switch::before,
+main .settings .switch::after {
+  content: "";
+}
+
+main .settings .switch::before {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+  background-color: var(--main);
+  box-shadow: 0 1px 2px #c4c4c4;
+  transition: 0.4s;
+}
+
+main .settings .switch.checked::before {
+  left: 2px;
+  background-color: red;
+}
+
+main .settings .switch::after {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 31px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+main .settings .switch.checked::after {
+  left: 8.5px;
+}
+
+main .settings hr {
+  border: 0;
+  border-top: 1.5px solid #eee;
+  margin: 15px 0px;
+}
+
+main .settings h4 {
+  font-family: raleway, sans-serif;
+  text-transform: uppercase;
+  color: #4b4741;
+  font-weight: 800;
+  margin-left: 3px;
+  margin-bottom: 13px;
+  text-align: left;
+  font-size: 13px;
+}
+
+main .settings .box {
+  display: grid;
+  grid-template-columns: repeat(4, calc(100% / 4));
+  align-content: center;
+  justify-items: center;
+  row-gap: 10px;
+}
+
+main .settings .box img {
+  width: 30px;
+  height: 30px;
+  padding: 1.5px;
+  border: 1px solid #878686a1;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+main .settings .box img.active {
+  border-color: red;
+  background-color: red;
+  padding: 2.5px;
+}
+
+main .settings .box span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1.5px white;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+main .settings .box span.active {
+  border: 3px solid red;
+}
+
+main .settings .box span:nth-child(1) {
+  background-color: #ff7149;
+}
+main .settings .box span:nth-child(2) {
+  background-color: #5bb75b;
+}
+main .settings .box span:nth-child(3) {
+  background-color: #00becc;
+}
+main .settings .box span:nth-child(4) {
+  background-color: #dc8068;
+}
+main .settings .box span:nth-child(5) {
+  background-color: #45b5f5;
+}
+main .settings .box span:nth-child(6) {
+  background-color: #dc3522;
+}
+main .settings .box span:nth-child(7) {
+  background-color: #c75a5a;
+}
+main .settings .box span:nth-child(8) {
+  background-color: #f9c56a;
+}
+
+main .settings .reset {
+  display: block;
+  margin: 20px auto 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--main);
+  opacity: 0.85;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+
+main .settings button:hover {
+  background-color: var(--main);
+  opacity: 1;
+}
+
+main img,
+main h1,
+main p,
+main i,
+main main .settings {
+  z-index: 1;
+}
+
+main h1 {
+  color: #fff;
+  font-size: 72px;
+  margin: 15px 0;
+}
+
+main h1 span {
+  color: var(--main);
+}
+
+main p {
+  font-weight: 400;
+  color: #e6e6e6;
+  font-size: 36px;
+}
+
+@media (max-width: 768px) {
+  main img {
+    width: 200px;
+  }
+  main h1 {
+    font-size: 42px;
+  }
+  main p {
+    font-size: 24px;
+  }
+}
+
+main .fa-angles-down {
+  color: var(--main);
+  font-size: 32px;
+  border: 3px solid;
+  padding: 15px 8px;
+  border-radius: 35px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: 0.4s;
+  animation: up-down 3s linear infinite;
+}
+
+main .fa-angles-down:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: var(--main);
+}
+
+@keyframes up-down {
+  0%,
+  100% {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 20px;
+  }
+}
+/*!******! End Main !******!*/
+
+/*!******! Start Restaurant Section !******!*/
+.restaurant {
+  background-color: #fff;
+  padding-bottom: 80px;
+}
+
+.restaurant .container .box {
+  display: flex;
+  gap: 30px;
+}
+
+.restaurant .container .box .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: start;
+  gap: 9px;
+  /* width: 350px; */
+}
+
+.restaurant .container .box .images img:first-child {
+  width: 350px;
+}
+
+.restaurant .container .box .images img:not(:first-child) {
+  width: 48.5%;
+}
+
+@media (max-width: 991px) {
+  .restaurant .container .box {
+    flex-direction: column;
+  }
+  .restaurant .container .box .images img:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .restaurant .container .box .images img:first-child {
+    display: block;
+    width: 100%;
+  }
+  .restaurant .container .box .images img:not(:first-child) {
+    display: none;
+  }
+}
+
+.restaurant .container .box .text p {
+  color: #828281;
+  font-size: 22px;
+  margin-bottom: 10px;
+  line-height: 1.42857143;
+  font-family: "Josefin Sans", sans-serif;
+}
+/*!******! End Restaurant Section !******!*/
+
+/*!******! Start Specials Section !******!*/
+.specials {
+  background-image: url(../img/special.png);
+  background-size: cover;
+  padding-bottom: 80px;
+}
+.specials .main-header {
+  color: #fff;
+}
+
+.specials .main-description {
+  color: #eee;
+}
+
+.specials .slider-box {
+  display: flex;
+  align-items: center;
+}
+
+.specials .slider-box i {
+  font-size: 70px;
+  color: white;
+  cursor: pointer;
+}
+
+/* .specials .slider-box .cards {
+  overflow: hidden;
+  position: relative;
+} */
+
+.specials .slider-box .box {
+  background-color: #fff;
+  border-radius: 7px;
+  display: flex;
+  margin: 0 40px;
+}
+
+.specials .slider-box .box .image {
+  width: 35%;
+  flex: none;
+  overflow: hidden;
+}
+
+.specials .slider-box .box img {
+  width: 100%;
+  transition: 0.4s;
+}
+.specials .slider-box .box:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.specials .slider-box .box .text {
+  padding: 20px 30px;
+}
+
+.specials .slider-box .box .text .title {
+  margin-bottom: 10px;
+  padding-bottom: 9px;
+}
+
+.specials .slider-box .box .text .title h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #4b4741;
+  font-family: "Raleway", sans-serif;
+}
+
+.specials .slider-box .box .text .title p {
+  font-size: 22px;
+  line-height: 1.2em;
+  color: #aaa;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 10px 0 15px;
+  position: relative;
+}
+.specials .slider-box .box .text .title p::after {
+  content: "";
+  height: 3px;
+  width: 115px;
+  background-color: var(--main);
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+}
+
+.specials .slider-box .box .text > p {
+  font-size: 21px;
+  color: #828281;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.specials .slider-box .box .text .btn a {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 15px 25px;
+  border-radius: 7px;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  display: inline-block;
+}
+
+.specials .slider-box .box .text .btn .order {
+  background-color: var(--main);
+  opacity: 0.8;
+  color: rgb(0, 0, 0);
+}
+
+.specials .slider-box .box .text .btn .order:hover {
+  opacity: 1;
+}
+
+.specials .slider-box .box .text .btn .add {
+  background-color: #e9e5dd;
+  color: #8c8881;
+  border: 1px solid #e9e5dd;
+  margin: 0 0 0 15px;
+}
+.specials .slider-box .box .text .btn .add:hover {
+  background-color: #d5cdbe;
+  border: 1px solid #e9e5dd;
+  color: #333;
+}
+
+@media (max-width: 1200px) {
+  .specials .slider-box .box .image {
+    width: 40%;
+  }
+  .specials .slider-box .box .text .title h2 {
+    font-size: 24px;
+  }
+  .specials .slider-box .box .text > p {
+    font-size: 19px;
+  }
+}
+@media (max-width: 992px) {
+  .specials .slider-box i {
+    display: none;
+  }
+  .specials .slider-box .box {
+    margin: 0;
+  }
+  .specials .slider-box .box .image {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .specials .slider-box .box .text .btn a {
+    width: 100%;
+    text-align: center;
+  }
+  .specials .slider-box .box .text .btn .add {
+    margin: 13px 0 0;
+  }
+}
+/*!******! End Specials Section !******!*/
+
+/*!******! Start Reservations Section !******!*/
+.reserv {
+  background-color: #fff;
+  padding-bottom: 80px;
+}
+
+.reserv .container .box {
+  border: 1px solid #f3f1ed;
+  padding: 25px 50px;
+}
+
+.reserv .container .box form .form-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.reserv .container .box form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 15px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.reserv .container .box form .form-group label {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.reserv .container .box form .form-group input {
+  font-size: 16px;
+  height: 40px;
+  border: none;
+  background-color: #f3f1ed;
+  padding: 3px 50px 3px 15px;
+  color: #555;
+  outline: none;
+}
+
+.reserv .container .box form .form-group i {
+  position: absolute;
+  right: 35px;
+  bottom: 22px;
+  color: var(--main);
+  font-size: inherit;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  display: none;
+}
+.reserv .container .box [type="submit"] {
+  border: none;
+  padding: 15px 40px;
+  font-weight: 700;
+  background-color: var(--main);
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #333;
+  margin: 20px auto;
+  display: block;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+}
+
+.reserv .container .call {
+  color: #828281;
+  font-size: 22px;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #fafafa;
+  position: relative;
+}
+.reserv .container .call::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: -0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 10px;
+  background-size: 16px 100%;
+  background-image: linear-gradient(135deg, #f6f6f6 25%, transparent 25%),
+    linear-gradient(225deg, #f6f6f6 25%, transparent 25%);
+  background-position: 7px 0;
+}
+
+.reserv .container .call span {
+  font-weight: bolder;
+}
+
+/*!******! End Reservations Section !******!*/
+/* Fonts :
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+*/
+
+
